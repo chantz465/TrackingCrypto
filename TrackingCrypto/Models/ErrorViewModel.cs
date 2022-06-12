@@ -1,6 +1,6 @@
 using System;
 
-namespace ASP.NetCoreE1.Models
+namespace TrackingCrypto.Models
 {
     public class ErrorViewModel
     {

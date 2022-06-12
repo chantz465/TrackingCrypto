@@ -1,4 +1,4 @@
-﻿using ASP.NetCoreE1.Models;
+﻿using TrackingCrypto.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ASP.NetCoreE1.Controllers
+namespace TrackingCrypto.Controllers
 {
     public class HomeController : Controller
     {

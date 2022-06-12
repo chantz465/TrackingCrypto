@@ -1,0 +1,43 @@
+﻿
+@model Wallet 
+
+
+<h2>Welcome and how can I help you today</h2>
+<div style="display: block">
+    @*<a href="/Wallet/company">Company wallet</a>*@
+    <a href="/Wallet/UpdateWallet/@Model.WalletID/">Update Wallet</a>
+</div>
+
+
+<table class="table">
+    <tr>
+        <th>WalletID</th>
+        <th>CompanyName</th>
+        <th>CoinName</th>
+        <th>WalletAddress</th>
+    </tr>
+
+
+
+    <tr>
+        <td>@Model.WalletID</td>
+        <td>@Model.CompanyName</td>
+        <td>@Model.CoinName</td>
+        <td><a href=/Transactions/Index/@Model.WalletAddress>@Model.WalletAddress</a></td> 
+
+    </tr>
+
+
+</table>
+
+@*<td><a href=/Transactions/@Model.WalletAddress>@Model.WalletAddress</a></td> 
+<td>@Model.WalletAddress</td>*@
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteWallet", "Wallet", "Post"))
+    {
+        <input type="hidden" asp-for="WalletID" value="@Model.WalletID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
+    }
+</div>

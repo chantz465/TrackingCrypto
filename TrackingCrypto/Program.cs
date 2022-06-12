@@ -6,8 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TrackingCrypto.Models;
 
-namespace ASP.NetCoreE1
+namespace TrackingCrypto
 {
     public class Program
     {

@@ -1,0 +1,19 @@
+﻿@using TrackingCrypto
+@model Wallet
+
+<h2>Update @Model.CompanyName</h2>
+
+@using (Html.BeginForm("UpdateWalletToDatabase", "Wallet", "Post"))
+{
+    @*<input asp-for="WalletID" type="hidden" value="@Model.WalletID" />*@
+    
+    <input asp-for="CompanyName" type="hidden" value="@Model.CompanyName" />
+
+    <label asp-for="CoinName" class="control-label">Name</label>
+
+    <input type="text" name="Coin Name" class="form-control" value="@Model.CoinName" />
+    <label asp-for="WalletAddress" class="control-label">WalletAddress</label>
+    
+    <input type="text" name="WalletAddress" class="form-control" value="@Model.WalletAddress" />
+    <input type="submit" value="Update Product" class="btn btn-primary" />
+}

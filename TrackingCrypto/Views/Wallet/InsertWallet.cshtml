@@ -1,0 +1,36 @@
+﻿@using TrackingCrypto
+@model Wallet
+
+<h2>Add new Wallet</h2>
+
+@using (Html.BeginForm("InsertWalletToDatabase", "Wallet", "Post"))
+{   
+    <label asp-for="WalletID" class="control-label">WalletID</label>
+    
+
+    <input type="text" name="WalletID" class="form-control" value="" />
+    
+    
+    <label asp-for="CoinName" class="control-label">CoinName</label>
+    
+
+    <input type="text" name="CoinName" class="form-control" value="" />
+    <label asp-for="CompanyName" class="control-label">CompanyName</label>
+    <input type="text" name="CompanyName" class="form-control" />
+
+    <label asp-for="WalletAddress" class="control-label">WalletAddress</label>
+
+    <input type="text" name="WalletAddress" class="form-control" />
+
+   @* <div class="form-group">
+        <label for="">Select a company</label>
+        <select class="form-control" name="CompanyId" value="">
+            @foreach (var  in Model.Companyies)
+            {
+                <option value="@.CompanyID">@wallet.CompanyID @wallet.CoinName</option>
+            }
+        </select>
+    </div>*@
+    
+    <input type="submit" value="Create wallet" class="btn btn-primary" />
+}

@@ -10,9 +10,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using ASP.NetCoreE1.Models;
+using TrackingCrypto.Models;
 
-namespace ASP.NetCoreE1
+namespace TrackingCrypto
 {
     public class Startup
     {
@@ -35,7 +35,7 @@ namespace ASP.NetCoreE1
                   return conn;
               });
 
-            services.AddTransient<IProductRepo, ProductRepo>();
+            services.AddTransient<IWalletRepo, WalletRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

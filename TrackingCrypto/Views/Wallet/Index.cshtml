@@ -1,0 +1,44 @@
+﻿@using TrackingCrypto
+
+@model IEnumerable<Wallet>
+
+<h2>Welcome and how can I help you today</h2>
+<div style="display: block">
+     @*<a href="/Wallet/company">Company wallet</a>
+     <a href="/Wallet/UpdateWallet">Update Wallet</a>**@
+     <a href="/Wallet/InsertWallet">Add Wallet</a>
+
+ </div>
+
+
+ <table class="table">
+    <tr>
+        <th>WalletID</th> 
+        <th>CompanyName</th>
+        <th>CoinName</th>
+        <th>WalletAddress</th>        
+    </tr>
+
+    @foreach (var wallet in Model)
+    {
+        <tr>
+            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.WalletID</a></td> 
+            <td>@wallet.CompanyName</td>
+            <td>@wallet.CoinName</td>
+            <td>@wallet.WalletAddress</td>             
+        </tr>
+    }
+
+</table>
+
+
+
+@*//@wallet.WalletID
+//@wallet.CompanyName
+//<a href=/Wallet/ViewWallet/@wallet.CompanyName>@wallet.CompanyName</a>
+//<a href=/Wallet/ViewWallet/@wallet.CoinName>@wallet.CoinName</a>
+//<td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.CompanyName</a></td>
+//            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.CoinName</a></td>
+//            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.WalletAddress</a></td> 
+
+//*@
