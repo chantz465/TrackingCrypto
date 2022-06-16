@@ -14,6 +14,11 @@ namespace TrackingCrypto
         public string CoinName { get; set; }
         public string WalletAddress { get; set; }
 
+        public double Balance { get; set; }
+
+
+    
+
         public IEnumerable<Company> Companies { get; set; }
 
         public IEnumerable<Wallet> Wallets { get; set; }

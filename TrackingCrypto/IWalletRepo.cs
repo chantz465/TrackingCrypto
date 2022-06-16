@@ -12,7 +12,7 @@ namespace TrackingCrypto
     {
         public IEnumerable<Wallet> GetAllWallets();
 
-
+        public Wallet GetBalance(double balnace);
         public Wallet GetWallet(int id);
 
         public Wallet GetCompany(string CompanyName);

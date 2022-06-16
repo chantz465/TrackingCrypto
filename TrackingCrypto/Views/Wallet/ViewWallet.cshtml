@@ -1,43 +1,70 @@
-﻿
+﻿@{
+    APICaller wallet1 = new APICaller();
+    string w = "I Love Bacon";
+    Console.WriteLine(w);
+    Console.WriteLine("I love Bacon 21");
+    string result = wallet1.APIwalletEth();
+    double balance = double.Parse(result);
+    balance = balance / 1000000000000000000;
+}
+
+
+
+
 @model Wallet 
 
 
-<h2>Welcome and how can I help you today</h2>
+<h2><span style="color:crimson"</span>Take a Look</h2>
 <div style="display: block">
     @*<a href="/Wallet/company">Company wallet</a>*@
     <a href="/Wallet/UpdateWallet/@Model.WalletID/">Update Wallet</a>
 </div>
 
+<body class="bg-img">
+     <style>
+    body {
+        width:100vw;
+        height:100vh;
+        background-position: left center;
+    }
+
+    .bg-img{
+        background-image: url('/imgs/crytpotracker with logo.png')
+    }
+
+
+</style>
 
 <table class="table">
     <tr>
-        <th>WalletID</th>
-        <th>CompanyName</th>
-        <th>CoinName</th>
-        <th>WalletAddress</th>
+        <th><span style="color:crimson"</span>WalletID</th>
+        <th><span style="color:crimson"</span>CompanyName</th>
+        <th><span style="color:crimson"</span>CoinName</th>
+        <th><span style="color:crimson"</span>WalletAddress</th>
+        <th><span style="color:crimson"</span>Balance</th>
     </tr>
 
 
 
     <tr>
-        <td>@Model.WalletID</td>
-        <td>@Model.CompanyName</td>
-        <td>@Model.CoinName</td>
-        <td><a href=/Transactions/Index/@Model.WalletAddress>@Model.WalletAddress</a></td> 
+        <td><span style="color:crimson"</span>@Model.WalletID</td>
+        <td><span style="color:crimson"</span>@Model.CompanyName</td>
+        <td><span style="color:crimson"</span>@Model.CoinName</td>
+        <td><span style="color:crimson"</span>Model.WalletAddress</td>
+        <td><span style="color:crimson"</span>@Model.Balance</td>
 
     </tr>
 
 
 </table>
 
-@*<td><a href=/Transactions/@Model.WalletAddress>@Model.WalletAddress</a></td> 
-<td>@Model.WalletAddress</td>*@
+</body>
 
 <div style="display: block">
 
     @using (Html.BeginForm("DeleteWallet", "Wallet", "Post"))
     {
         <input type="hidden" asp-for="WalletID" value="@Model.WalletID" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Wallet" />
     }
 </div>

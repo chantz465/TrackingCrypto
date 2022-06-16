@@ -5,10 +5,11 @@
 
 @using (Html.BeginForm("InsertWalletToDatabase", "Wallet", "Post"))
 {   
-    <label asp-for="WalletID" class="control-label">WalletID</label>
     
 
-    <input type="text" name="WalletID" class="form-control" value="" />
+    <input asp-for="WalletID" type="hidden" value="" />
+
+    
     
     
     <label asp-for="CoinName" class="control-label">CoinName</label>
@@ -22,15 +23,7 @@
 
     <input type="text" name="WalletAddress" class="form-control" />
 
-   @* <div class="form-group">
-        <label for="">Select a company</label>
-        <select class="form-control" name="CompanyId" value="">
-            @foreach (var  in Model.Companyies)
-            {
-                <option value="@.CompanyID">@wallet.CompanyID @wallet.CoinName</option>
-            }
-        </select>
-    </div>*@
+   
     
     <input type="submit" value="Create wallet" class="btn btn-primary" />
 }

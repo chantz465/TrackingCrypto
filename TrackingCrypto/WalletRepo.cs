@@ -28,7 +28,13 @@ namespace TrackingCrypto
             return _conn.Query<Company>("SELECT * FROM Tracking_Crypto.company_name;");
         }
 
-        
+        public Wallet GetBalance(double balance)
+        {
+            return _conn.QuerySingle<Wallet>("SELECT * FROM Tracking_Crypto.wallet WHERE Balance = balance",
+               new { Balance = balance });
+        }
+
+
 
         public Wallet GetWallet(int id)
         {
@@ -81,7 +87,16 @@ namespace TrackingCrypto
         //    throw new NotImplementedException();
         //}
 
+        public void AssignBalance()
+        {
+            APICaller wallet1 = new APICaller();
+            string result = wallet1.APIwalletEth();
+            double balance = double.Parse(result);
+            balance = balance / 1000000000000000000;
+            _conn.Execute("UPDATE Tracking_Crypto.Wallet SET Balance = @balance WHERE WalletID = @1);",
+                new { Balance = balance, walletId = 1 });
 
+        }
 
         public Wallet AssignCompanies()
         {

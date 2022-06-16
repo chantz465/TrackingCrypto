@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace TrackingCrypto.Controllers
 {
     public class TransactionsController : Controller
     {
-
+        public IEnumerable<Wallet> Wallet { get; set; }
 
         private readonly IWalletRepo walletRepo;
 
@@ -13,14 +14,20 @@ namespace TrackingCrypto.Controllers
             this.walletRepo = walletRepo;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            var wallets = walletRepo.GetAllWallets();
+            var wallet = walletRepo.GetWallet(id);
             var t = new Transactions();
-            t.Wallets = wallets;
+            t.Wallet = (IEnumerable<Wallet>)wallet;
             return View(t);
         }
 
-        
+        //public IActionResult Index()
+        //{
+        //    var wallets = walletRepo.GetAllWallets();
+
+        //    return View(wallets);
+        //}
+
     }
 }

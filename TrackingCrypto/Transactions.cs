@@ -14,7 +14,7 @@ namespace TrackingCrypto
 
         public string Balance { get; set; }
 
-        public IEnumerable<Wallet> Wallets { get; set; }
+        public IEnumerable<Wallet> Wallet { get; set; }
 
 
 

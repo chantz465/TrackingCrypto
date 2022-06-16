@@ -2,30 +2,59 @@
 
 @model IEnumerable<Wallet>
 
-<h2>Welcome and how can I help you today</h2>
-<div style="display: block">
-     @*<a href="/Wallet/company">Company wallet</a>
-     <a href="/Wallet/UpdateWallet">Update Wallet</a>**@
-     <a href="/Wallet/InsertWallet">Add Wallet</a>
+ 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<h2><span style="color:crimson"</span>Welcome and how can I help you today</h2>
+<div style="display: block">
+    
+     <a href="/Wallet/InsertWallet">Add Wallet</a>
+    
  </div>
 
 
+
+
+
+</head>
+
+<body class="bg-img">
+     <style>
+    body {
+        width:100vw;
+        height:100vh;
+        background-position: left center;
+    }
+
+    .bg-img{
+        background-image: url('/imgs/crytpotracker with logo.png')
+    }
+
+
+</style>
+
  <table class="table">
     <tr>
-        <th>WalletID</th> 
-        <th>CompanyName</th>
-        <th>CoinName</th>
-        <th>WalletAddress</th>        
+        <th><span style="color:crimson"</span>WalletID</th> 
+        <th><span style="color:crimson"</span>CompanyName</th>
+        <th><span style="color:crimson"</span>CoinName</th>
+        <th><span style="color:crimson"</span>WalletAddress</th>
+        
     </tr>
 
     @foreach (var wallet in Model)
     {
         <tr>
             <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.WalletID</a></td> 
-            <td>@wallet.CompanyName</td>
-            <td>@wallet.CoinName</td>
-            <td>@wallet.WalletAddress</td>             
+            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.CompanyName</a></td>
+            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.CoinName</a></td>
+            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.WalletAddress</a></td>
+            
         </tr>
     }
 
@@ -33,12 +62,5 @@
 
 
 
-@*//@wallet.WalletID
-//@wallet.CompanyName
-//<a href=/Wallet/ViewWallet/@wallet.CompanyName>@wallet.CompanyName</a>
-//<a href=/Wallet/ViewWallet/@wallet.CoinName>@wallet.CoinName</a>
-//<td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.CompanyName</a></td>
-//            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.CoinName</a></td>
-//            <td><a href=/Wallet/ViewWallet/@wallet.WalletID>@wallet.WalletAddress</a></td> 
-
-//*@
+</body>
+</html>

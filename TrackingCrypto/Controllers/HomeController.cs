@@ -18,6 +18,21 @@ namespace TrackingCrypto.Controllers
             _logger = logger;
         }
 
+        //private readonly IWalletRepo repo;
+
+        //public HomeController(IWalletRepo repo)
+        //{
+        //    this.repo = repo;
+        //}
+
+        //public IActionResult Index()
+        //{
+        //    var wallets = repo.GetAllWallets();
+
+        //    return View(wallets);
+        //}
+
+
         public IActionResult Index()
         {
             return View();
