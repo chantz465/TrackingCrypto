@@ -2,9 +2,9 @@
 {
     public interface ITransactionsRepo
     {
-        public IEnmerable<Wallet> GetAllWallets();
+        //public IEnmerable<Wallet> GetAllWallets();
 
-        public Wallet GetWalletAddress(string walletAddress);
+        //public Wallet GetWalletAddress(string walletAddress);
 
 
     }

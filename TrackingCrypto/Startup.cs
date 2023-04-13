@@ -8,6 +8,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using TrackingCrypto.Models;
@@ -30,10 +31,12 @@ namespace TrackingCrypto
 
             services.AddScoped<IDbConnection>((s) =>
             {
-                  IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("bestbuy"));
-                  conn.Open();
-                  return conn;
-              });
+
+
+                DbConnection conn = new MySqlConnection(Configuration.GetConnectionString("bestbuy"));
+                conn.Open();
+                return conn;
+            });
 
             services.AddTransient<IWalletRepo, WalletRepo>();
         }

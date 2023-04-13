@@ -16,10 +16,10 @@ namespace TrackingCrypto
             _conn = conn;
         }
 
-        public IEnmerable<Wallet> GetAllWallets()
-        {
-            return (IEnmerable<Wallet>)_conn.Query<Wallet>("SELECT * FROM Tracking_Crypto.wallet;");
-        }
+        //public IEnmerable<Wallet> GetAllWallets()
+        //{
+        //    return (IEnmerable<Wallet>)_conn.Query<Wallet>("SELECT * FROM Tracking_Crypto.wallet;");
+        //}
 
         public Wallet GetWalletAddress(string WalletAddress)
         {
