@@ -26,9 +26,9 @@ namespace TrackingCrypto
 
         public void InsertWallet(Wallet walletToInsert);
 
-        public IEnumerable<Transactions> GetTransactions();
+        //public IEnumerable<Transactions> GetTransactions();
 
-        public IEnumerable<Company> GetCompanies();
+        //public IEnumerable<Company> GetCompanies();
         public Wallet AssignCompanies();
 
 

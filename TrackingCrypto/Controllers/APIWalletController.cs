@@ -9,7 +9,7 @@
 //    [ApiController]
 //    public class APIWalletController : ControllerBase
 //    {
-//        private static List<APIWallet> APIWallet = new List<APIWallet> 
+//        private static List<APIWallet> APIWallet = new List<APIWallet>
 //        {
 //        new APIWallet { Balance = "ETH" }
 

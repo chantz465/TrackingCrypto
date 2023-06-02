@@ -10,7 +10,7 @@ namespace TrackingCrypto
     {
         public int WalletID { get; set; }
 
-        public string CompanyName { get; set; }
+        public int CompanyName { get; set; }
         public string CoinName { get; set; }
         public string WalletAddress { get; set; }
 
